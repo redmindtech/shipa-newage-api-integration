@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    #driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/visacare?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    password: Ksksur@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: True
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        jdbc:
+          time_zone: UTC
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  application: 
+    name: NEWAGE-API-INTEGRATION
+
+server:
+  port: 8091
+
+shipa:
+  environment:
+    url: https://sandbox-api.shipadelivery.com/v2
+    secret_key: SKY7ptRZGJoru4v8AlL2qsAnqTm2BAqI
